@@ -1,6 +1,6 @@
 # 💻 Jitendra Singh Chouhan - Portfolio website
 Welcome to my personal portfolio website built with React.js, Framer Motion, and modern UI design principles. It showcases my work, projects, skills, and journey as a developer passionate about AI, ML, and Web Technologies.
-#### 🌐  Website: [Jitendra-Portfolio](https://todojustdoit.netlify.app/)
+#### 🌐  Website: [Jitendra-Portfolio](https://my-portfolio-jitendra.netlify.app/)
 
 # 🚀 Features
 * 🎨 Modern UI/UX with black-based aesthetic theme
