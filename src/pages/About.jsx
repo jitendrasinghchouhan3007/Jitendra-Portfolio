@@ -63,7 +63,7 @@ const About = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "3rem 1rem",
+        padding: "clamp(2rem,5vw,3rem) 1rem",
         background: "radial-gradient(circle at top, #0d0d0d, #000)",
         color: "white",
       }}
@@ -76,7 +76,7 @@ const About = () => {
           width: "100%",
           maxWidth: "1100px",
           background: "rgba(255,255,255,0.04)",
-          padding: "3rem 3.5rem",
+          padding: "clamp(1.5rem, 4vw, 3rem)",
           borderRadius: "18px",
           boxShadow: "0 0 25px rgba(0,255,200,0.08)",
           backdropFilter: "blur(10px)",
@@ -85,7 +85,7 @@ const About = () => {
         {/* Heading */}
         <h2
           style={{
-            fontSize: "1.9rem",
+            fontSize: "clamp(1.5rem,4vw,1.9rem)",
             marginBottom: "1.5rem",
             background:
               "linear-gradient(90deg, var(--accent), var(--accent-2))",
@@ -141,7 +141,7 @@ const About = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(2, minmax(160px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
               gap: "0.8rem 3.5rem",
               fontSize: "0.95rem",
               color: "rgba(255,255,255,0.85)",
@@ -206,8 +206,8 @@ const About = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1.3fr 1fr",
-              gap: "3rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "clamp(1.5rem, 4vw, 3rem)",
               marginTop: "2.5rem",
               alignItems: "center",
             }}
@@ -260,7 +260,7 @@ const About = () => {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
+                gridTemplateColumns: "repeat(auto-fit, minmax(80px, 1fr))",
                 gap: "22px",
                 justifyItems: "center",
               }}
@@ -274,8 +274,8 @@ const About = () => {
                   }}
                   transition={{ type: "spring", stiffness: 300 }}
                   style={{
-                    width: "90px",
-                    height: "90px",
+                    width: "clamp(70px, 10vw, 90px)",
+                    height: "clamp(70px, 10vw, 90px)",
                     borderRadius: "18px",
                     display: "flex",
                     flexDirection: "column",
@@ -290,8 +290,8 @@ const About = () => {
                     src={tech.logo}
                     alt={tech.name}
                     style={{
-                      width: "38px",
-                      height: "38px",
+                      width: "clamp(28px, 5vw, 38px)",
+                      height: "clamp(28px, 5vw, 38px)",
                       marginBottom: "6px",
                       objectFit: "contain",
                       filter: "drop-shadow(0 0 10px rgba(0,180,255,0.9))",
@@ -323,8 +323,8 @@ const About = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1.3fr 1fr",
-              gap: "3rem",
+             gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "clamp(1.5rem, 4vw, 3rem)",
               marginTop: "3.5rem",
               alignItems: "center",
             }}
@@ -387,8 +387,8 @@ const About = () => {
                   }}
                   transition={{ type: "spring", stiffness: 300 }}
                   style={{
-                    width: "90px",
-                    height: "90px",
+                    width: "clamp(70px, 10vw, 90px)",
+                    height: "clamp(70px, 10vw, 90px)",
                     borderRadius: "18px",
                     display: "flex",
                     flexDirection: "column",
@@ -403,8 +403,8 @@ const About = () => {
                     src={tool.logo}
                     alt={tool.name}
                     style={{
-                      width: "38px",
-                      height: "38px",
+                      width: "clamp(28px, 5vw, 38px)",
+                      height: "clamp(28px, 5vw, 38px)",
                       marginBottom: "6px",
                       filter: "drop-shadow(0 0 10px rgba(0,180,255,0.9))",
                     }}

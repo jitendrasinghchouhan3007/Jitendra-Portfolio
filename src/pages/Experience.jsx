@@ -18,7 +18,7 @@ export default function Experience() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "3rem 1rem",
+       padding: "clamp(2rem,5vw,3rem) 1rem",
         color: "white",
       }}
     >
@@ -31,7 +31,7 @@ export default function Experience() {
           maxWidth: "1100px",
           background: "rgba(255,255,255,0.04)",
           borderRadius: "18px",
-          padding: "2.5rem 3rem",
+          padding: "clamp(1.5rem,4vw,2.5rem)",
           border: "1px solid rgba(255,255,255,0.08)",
           backdropFilter: "blur(10px)",
           boxShadow: "0 0 30px rgba(0,0,0,0.6)",
@@ -48,7 +48,7 @@ export default function Experience() {
           }}
         >
           <div>
-            <h2 style={{ fontSize: "1.5rem", marginBottom: "0.4rem" }}>
+          <h2 style={{ fontSize: "clamp(1.2rem,3vw,1.5rem)", marginBottom: "0.4rem" }}>
               MERN Stack Developer Intern
             </h2>
 
@@ -133,42 +133,42 @@ export default function Experience() {
           >
             TECH STACK
           </p>
-           <div
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "8px",
+            }}
+          >
+            {[
+              "React.js",
+              "CSS3",
+              "JavaScript",
+              "Express",
+              "Node.js",
+              "MongoDB",
+              "MySQL",
+              "Tailwind CSS ",
+              "Responsive Design",
+              "RESTful APIs",
+              "JWT-based authentication",
+              "API-based AI integrations",
+            ].map((tech) => (
+              <span
+                key={tech}
                 style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "8px",
+                  padding: "6px 12px",
+                  fontSize: "0.75rem",
+                  borderRadius: "10px",
+                  background: "rgba(77,166,255,0.12)",
+                  border: "1px solid rgba(77,166,255,0.35)",
+                  color: "#4da6ff",
                 }}
               >
-                {[
-                  "React.js",
-                  "CSS3",
-                  "JavaScript",
-                  "Express",
-                  "Node.js",
-                  "MongoDB",
-                  "MySQL",
-                  "Tailwind CSS ",
-                  "Responsive Design",
-                  "RESTful APIs",
-                  "JWT-based authentication",
-                  "API-based AI integrations",
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    style={{
-                      padding: "6px 12px",
-                      fontSize: "0.75rem",
-                      borderRadius: "10px",
-                      background: "rgba(77,166,255,0.12)",
-                      border: "1px solid rgba(77,166,255,0.35)",
-                      color: "#4da6ff",
-                    }}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
 
         <br />
@@ -210,7 +210,7 @@ export default function Experience() {
         <div style={{ marginTop: "4rem" }}>
           <h2
             style={{
-              fontSize: "2rem",
+              fontSize: "clamp(1.5rem,4vw,2rem)",
               marginBottom: "2rem",
               color: "#7994ae",
             }}
@@ -224,7 +224,7 @@ export default function Experience() {
             style={{
               background: "rgba(255,255,255,0.04)",
               borderRadius: "16px",
-              padding: "2rem",
+              padding: "clamp(1.2rem,3vw,2rem)",
               border: "1px solid rgba(255,255,255,0.08)",
               backdropFilter: "blur(10px)",
             }}
@@ -242,7 +242,8 @@ export default function Experience() {
               {/* LEFT – IMAGE */}
               <div
                 style={{
-                  width: "400px",
+                  width: "100%",
+                  maxWidth: "400px",
                   borderRadius: "10px",
                   overflow: "hidden",
                   boxShadow: "0 0 30px rgba(0,0,0,0.6)",
@@ -254,7 +255,7 @@ export default function Experience() {
                   alt="Geek Theory Website"
                   style={{
                     width: "100%",
-                    height: "250px",
+                    height: "clamp(180px,25vw,250px)",
                     objectFit: "cover",
                     display: "block",
                   }}
@@ -265,7 +266,7 @@ export default function Experience() {
               <div>
                 <h3
                   style={{
-                    fontSize: "1.6rem",
+                    fontSize: "clamp(1.2rem,3vw,1.6rem)",
                     marginBottom: "0.4rem",
                     color: "#4da6ff",
                   }}
@@ -328,13 +329,7 @@ export default function Experience() {
               services, and a professional approach to building scalable digital
               solutions.
             </p>
-            <p
-              style={{
-                color: "rgba(255,255,255,0.75)",
-                lineHeight: "1.6",
-                fontSize: "0.95rem",
-              }}
-            >
+            
               <p
                 style={{
                   color: "rgba(255,255,255,0.75)",
@@ -345,7 +340,7 @@ export default function Experience() {
                 The site showcases expertise in web and mobile app development, AI integration, and digital business solutions.
                 It provides a clear view of services, technologies, and project capabilities tailored for tech-focused businesses. The platform emphasizes a clean, responsive design aimed at delivering professional IT solutions online.
               </p>
-            </p>
+            
 
             {/* TECH STACK */}
             <div style={{ marginTop: "1.5rem" }}>
@@ -397,17 +392,17 @@ export default function Experience() {
           </div>
         </div>
 
-        
+
 
         <div style={{ marginTop: "4rem" }}>
-          
+
 
           {/* SINGLE CONTAINER */}
           <div
             style={{
               background: "rgba(255,255,255,0.04)",
               borderRadius: "16px",
-              padding: "2rem",
+              padding: "clamp(1.2rem,3vw,2rem)",
               border: "1px solid rgba(255,255,255,0.08)",
               backdropFilter: "blur(10px)",
             }}
@@ -425,7 +420,8 @@ export default function Experience() {
               {/* LEFT – IMAGE */}
               <div
                 style={{
-                  width: "400px",
+                  width: "100%",
+                  maxWidth: "400px",
                   borderRadius: "10px",
                   overflow: "hidden",
                   boxShadow: "0 0 30px rgba(0,0,0,0.6)",
@@ -437,7 +433,7 @@ export default function Experience() {
                   alt="Skilledu - Study AI"
                   style={{
                     width: "100%",
-                    height: "250px",
+                    height: "clamp(180px,25vw,250px)",
                     objectFit: "cover",
                     display: "block",
                   }}
@@ -448,7 +444,7 @@ export default function Experience() {
               <div>
                 <h3
                   style={{
-                    fontSize: "1.6rem",
+                    fontSize: "clamp(1.2rem,3vw,1.6rem)",
                     marginBottom: "0.4rem",
                     color: "#4da6ff",
                   }}
@@ -508,13 +504,7 @@ export default function Experience() {
             >
               SkilledU AI is an AI-powered learning and doubt-solving platform designed to help students and learners understand complex academic and technical concepts more effectively. The website allows users to explore learning resources, ask subject-specific questions, and receive intelligent, contextual explanations that support self-paced learning. It is especially useful for students preparing for exams, technical interviews, or skill development in modern technology domains.
             </p>
-            <p
-              style={{
-                color: "rgba(255,255,255,0.75)",
-                lineHeight: "1.6",
-                fontSize: "0.95rem",
-              }}
-            >
+            
               <p
                 style={{
                   color: "rgba(255,255,255,0.75)",
@@ -522,8 +512,8 @@ export default function Experience() {
                   fontSize: "0.95rem",
                 }}
               >
-               The platform is used by learners to quickly clarify doubts, reinforce concepts, and access structured educational guidance without relying solely on traditional classroom methods. Its intuitive interface and responsive design make it accessible across devices, enabling users to study anytime and anywhere. The AI-driven approach helps personalize the learning experience by providing relevant explanations based on user queries.    </p>
-            </p>
+                The platform is used by learners to quickly clarify doubts, reinforce concepts, and access structured educational guidance without relying solely on traditional classroom methods. Its intuitive interface and responsive design make it accessible across devices, enabling users to study anytime and anywhere. The AI-driven approach helps personalize the learning experience by providing relevant explanations based on user queries.    </p>
+            
 
             {/* TECH STACK */}
             <div style={{ marginTop: "1.5rem" }}>
@@ -577,14 +567,14 @@ export default function Experience() {
 
 
         <div style={{ marginTop: "4rem" }}>
-          
+
 
           {/* SINGLE CONTAINER */}
           <div
             style={{
               background: "rgba(255,255,255,0.04)",
               borderRadius: "16px",
-              padding: "2rem",
+              padding: "clamp(1.2rem,3vw,2rem)",
               border: "1px solid rgba(255,255,255,0.08)",
               backdropFilter: "blur(10px)",
             }}
@@ -602,7 +592,8 @@ export default function Experience() {
               {/* LEFT – IMAGE */}
               <div
                 style={{
-                  width: "400px",
+                  width: "100%",
+                  maxWidth: "400px",
                   borderRadius: "10px",
                   overflow: "hidden",
                   boxShadow: "0 0 30px rgba(0,0,0,0.6)",
@@ -614,18 +605,18 @@ export default function Experience() {
                   alt="VaataSmart-CRM System"
                   style={{
                     width: "100%",
-                    height: "250px",
+                    height: "clamp(180px,25vw,250px)",
                     objectFit: "cover",
                     display: "block",
                   }}
                 />
               </div>
- 
+
               {/* RIGHT – TITLE */}
               <div>
                 <h3
                   style={{
-                    fontSize: "1.6rem",
+                    fontSize: "clamp(1.2rem,3vw,1.6rem)",
                     marginBottom: "0.4rem",
                     color: "#4da6ff",
                   }}
@@ -685,15 +676,8 @@ export default function Experience() {
             >
               The VaataSmart CRM System is a web-based internal management platform developed to streamline business operations such as customer management, sales tracking, and order processing for the company. The system helps teams manage customer information, monitor product orders, and maintain business data in a centralized dashboard.
             </p>
-            <p
-              style={{
-                color: "rgba(255,255,255,0.75)",
-                lineHeight: "1.6",
-                fontSize: "0.95rem",
-              }}
-              
-            >
-              
+          
+
               <p
                 style={{
                   color: "rgba(255,255,255,0.75)",
@@ -701,8 +685,8 @@ export default function Experience() {
                   fontSize: "0.95rem",
                 }}
               >
-               The CRM enables employees to efficiently handle customer interactions, maintain records, and track business activities in real time. It improves operational efficiency by reducing manual processes and providing a structured workflow for managing clients and business data.    </p>
-            </p>
+                The CRM enables employees to efficiently handle customer interactions, maintain records, and track business activities in real time. It improves operational efficiency by reducing manual processes and providing a structured workflow for managing clients and business data.    </p>
+            
 
             {/* TECH STACK */}
             <div style={{ marginTop: "1.5rem" }}>
