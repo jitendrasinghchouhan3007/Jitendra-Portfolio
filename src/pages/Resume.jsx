@@ -3,7 +3,13 @@ import { motion } from "framer-motion";
 
 export default function Resume() {
   return (
-    <section className="container" style={{ padding: "60px 0" }}>
+    <section
+      style={{
+        padding: "60px 0",
+        maxWidth: "1200px",
+        margin: "0 auto"
+      }}
+    >
       <motion.div
         className="card"
         initial={{ opacity: 0, y: 40 }}
@@ -26,13 +32,13 @@ export default function Resume() {
           📄 Resume
         </motion.h2>
 
-        
-        
-        
 
-        
-        
-        
+
+
+
+
+
+
 
         {/* PDF Viewer */}
         <motion.div
@@ -48,7 +54,7 @@ export default function Resume() {
         >
           <iframe
             src="/resume.pdf"
-            title="Kunj Desai Resume"
+            title="Jitendra Singh Chouhan Resume"
             style={{
               width: "100%",
               height: "650px",
@@ -65,8 +71,8 @@ export default function Resume() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           style={{
-            display: "inline-block",
-            marginTop: 20,
+            display: "block",
+            margin: "20px auto 0",
             background: "#00b4ff",
             color: "#fff",
             padding: "10px 22px",
@@ -74,11 +80,11 @@ export default function Resume() {
             textDecoration: "none",
             fontWeight: 500,
             letterSpacing: 0.3,
+            width: "fit-content"
           }}
         >
           ⬇️ Download Resume
         </motion.a>
-
 
       </motion.div>
     </section>

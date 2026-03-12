@@ -45,7 +45,7 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "1rem 2rem",
+          padding: "0.8rem 2rem",
           borderBottom: "1px solid rgba(255,255,255,0.1)",
           background: "rgba(0,0,0,0.6)",
           backdropFilter: "blur(10px)",
@@ -54,62 +54,62 @@ export default function Navbar() {
       >
         {/* Logo */}
         {/* ===== LOGO ===== */}
-<div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-  <motion.div
-    initial={{ scale: 0 }}
-    animate={{ scale: 1 }}
-    transition={{ type: "spring", stiffness: 200 }}
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      cursor: "pointer",
-    }}
-  >
-    {/* LOGO TEXT */}
-    <motion.div
-      whileHover={{
-        scale: 1.05,
-        textShadow: "0 0 12px var(--accent)",
-      }}
-      transition={{ type: "spring", stiffness: 200 }}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "6px",
-        fontFamily: "monospace",
-        fontWeight: 600,
-        fontSize: "1.05rem",
-        color: "var(--accent)",
-      }}
-    >
-      <span>&lt;/&gt;</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              cursor: "pointer",
+            }}
+          >
+            {/* LOGO TEXT */}
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                textShadow: "0 0 12px var(--accent)",
+              }}
+              transition={{ type: "spring", stiffness: 200 }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                fontFamily: "monospace",
+                fontWeight: 600,
+                fontSize: "1.05rem",
+                color: "var(--accent)",
+              }}
+            >
+              <span>&lt;/&gt;</span>
 
-      <span
-        style={{
-          fontFamily: "Inter, sans-serif",
-          letterSpacing: "0.5px",
-        }}
-      >
-         Web Developer
-      </span>
+              <span
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  letterSpacing: "0.5px",
+                }}
+              >
+                Web Developer
+              </span>
 
-      <span>&lt;/&gt;</span>
-    </motion.div>
+              <span>&lt;/&gt;</span>
+            </motion.div>
 
-    {/* SUBTITLE */}
-    <div
-      style={{
-        fontSize: "12px",
-        color: "var(--muted)",
-        marginTop: "2px",
-        textAlign: "center",
-      }}
-    >
-     
-    </div>
-  </motion.div>
-</div>
+            {/* SUBTITLE */}
+            <div
+              style={{
+                fontSize: "12px",
+                color: "var(--muted)",
+                marginTop: "2px",
+                textAlign: "center",
+              }}
+            >
+
+            </div>
+          </motion.div>
+        </div>
 
         {/* Desktop links */}
         <div
@@ -117,7 +117,7 @@ export default function Navbar() {
           style={{
             display: showButton ? "none" : "flex",
             justifyContent: "center",
-            gap: "2rem",
+            gap: "1.8rem",
             alignItems: "center",
             flexGrow: 1,
           }}
@@ -179,7 +179,7 @@ export default function Navbar() {
 
         {/* Hamburger */}
         {showButton && (
-          <div className="mobile-btn">
+          <div >
             <button
               style={{
                 background: "none",
@@ -241,14 +241,21 @@ export default function Navbar() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setIsOpen(false)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "rgba(0,180,255,0.1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                }}
                 style={{
                   color: "#fff",
                   textDecoration: "none",
-                  padding: "1rem 0",
+                  padding: "0.8rem 0",
                   width: "100%",
                   textAlign: "center",
-                  fontSize: 16,
+                  fontSize: "14px",
                   borderBottom: "1px solid rgba(255,255,255,0.05)",
+                  transition: "background 0.2s",
                 }}
               >
                 {l.label}

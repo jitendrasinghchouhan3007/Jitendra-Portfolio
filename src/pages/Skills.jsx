@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import "./Skills.css";
+
 
 const SKILLS = [
   { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
@@ -23,23 +23,22 @@ const SKILLS = [
   { name: "Vercel", logo: "https://camo.githubusercontent.com/698ad1a1d2b7021ee0d8f3dd5f17415844ae44c1d078979e46b301e1c5d542b7/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d76657263656c" },
   { name: "Postman", logo: "https://camo.githubusercontent.com/8829178716e96490611624f85c953c0805643f4d1645057ba5d29d021957d407/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d706f73746d616e" },
 
-  
+
 ];
 
 const ROWS = [
   [
-    { title: "Programming Languages", items: [ "C", "C++", "Java"] },
+    { title: "Programming Languages", items: ["C", "C++", "Java"] },
     { title: "MERN Stack Technologies", items: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express.js", "Tailwind", "Rest API"] },
     { title: "Databases & Tools", items: ["MySQL", "MongoDB",] },
-    { title: "Deployment", items: ["Vercel", "Env management", "Netlify","Render","Railway"] },
-  ],
-  [
-    { title: "Tools & Platforms", items: ["Git", "GitHub", "VS Code", "Antigravity","Cursor" ,"Postman"] },
+    { title: "Deployment", items: ["Vercel", "Env management", "Netlify", "Render", "Railway"] },
+    { title: "Tools & Platforms", items: ["Git", "GitHub", "VS Code", "Antigravity", "Cursor", "Postman"] },
     {
       title: "Soft Skills",
-      items: ["Teamwork", "Problem Solving", "Creativity", "Adaptability", "Communication","Prompt Engineering"],
+      items: ["Teamwork", "Problem Solving", "Creativity", "Adaptability", "Communication", "Prompt Engineering"],
     },
   ],
+ 
 ];
 
 export default function Skills() {
@@ -87,20 +86,60 @@ export default function Skills() {
   }, []);
 
   return (
-    <section className="skills-container" id="skills">
+    <section
+      id="skills"
+      style={{
+        padding: "3rem 1rem",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        color: "white",
+      }}
+    >
       {/* Header */}
       <motion.div
-        className="skills-header"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-5xl text-cyan-400 font-semibold mb-3">My Skills</h2>
-        <div className="w-28 h-[2px] bg-cyan-400 mx-auto mb-6"></div>
-        <p className="text-gray-400 text-lg max-w-xl mx-auto">
-          ✨ Technical expertise blended with creativity — explore my core competencies below.
-        </p>
-      </motion.div>
+  className="skills-header"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  style={{
+    textAlign: "left",
+    margin: "10px 0 12px 4%",
+    padding: 0,
+    maxWidth: "calc(100% - 8%)"
+  }}
+>
+  <h2
+    style={{
+      fontSize: "1.25rem",
+      color: "#00ffe0",
+      fontWeight: 600,
+      margin: 0,
+      lineHeight: "1.05"
+    }}
+  >
+    My Skills
+  </h2>
+
+  <div
+    style={{
+      width: "90px",
+      height: "2px",
+      background: "#00ffe0",
+      margin: "6px 0 8px 0"
+    }}
+  />
+
+  <p
+    style={{
+      color: "#b0b0b0",
+      fontSize: "0.95rem",
+      margin: 0,
+      padding: 0
+    }}
+  >
+    ✨ Technical expertise blended with creativity — explore my core competencies below.
+  </p>
+</motion.div>
 
       {/* Floating Orbs with page-load + hover highlight animation */}
       <motion.div
@@ -111,7 +150,7 @@ export default function Skills() {
         transition={{ duration: 1.2, ease: "easeOut" }}
         style={{
           width: "100%",
-          height: "550px",
+          height: "clamp(350px, 50vw, 550px)",
           borderRadius: "25px",
           background: "radial-gradient(circle at 50% 50%, #0a0a0a, #101010)",
           overflow: "hidden",
@@ -178,13 +217,35 @@ export default function Skills() {
       </motion.div>
 
       {/* Skills Table (Text Section) */}
-      <div className="skills-table">
+      <div
+        style={{
+          marginTop: "50px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "40px"
+        }}
+      >
         {ROWS.map((row, rowIndex) => (
-          <div key={rowIndex} className="skills-row">
+          <div
+            key={rowIndex}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "32px",
+              flexWrap: "wrap"
+            }}
+          >
             {row.map((col, colIndex) => (
               <motion.div
                 key={col.title}
-                className="skill-box"
+                style={{
+                  background: "linear-gradient(145deg,#080808,#0f0f0f)",
+                  border: "1px solid rgba(0,255,255,0.12)",
+                  borderRadius: "12px",
+                  padding: "18px 22px",
+                  width: "300px",
+                  textAlign: "left"
+                }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.05 }}

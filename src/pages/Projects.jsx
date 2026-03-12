@@ -64,13 +64,13 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <motion.section
-      className="container"
+     style={{ maxWidth: "1200px", margin: "28px auto", padding: "0 20px" }}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       id="projects"
     >
-      <div className="card" style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: 30 }}>
+<div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: 30 }}>
         <motion.h2
           className="text-4xl font-semibold text-cyan-400 mb-2"
           initial={{ opacity: 0 }}
@@ -94,13 +94,13 @@ export default function Projects() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
               style={{
-                background: 'linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.9))',
-                border: '1px solid rgba(0,255,255,0.1)',
-                borderRadius: 16,
-                padding: 16,
-                overflow: 'hidden',
-                boxShadow: '0 0 20px rgba(0,255,255,0.08)'
-              }}
+  background: 'linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.9))',
+  border: '1px solid rgba(0,255,255,0.1)',
+  borderRadius: 16,
+  padding: 16,
+  overflow: 'hidden',
+  boxShadow: '0 0 20px rgba(0,255,255,0.08)'
+}}
             >
               <motion.div className="ss" whileHover={{ scale: 1.05 }} style={{ borderRadius: 12, overflow: 'hidden' }}>
                 <img
@@ -142,7 +142,7 @@ export default function Projects() {
                     href={p.code}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn"
+                  
                     whileHover={{ scale: 1.08 }}
                     style={{
                       display: 'flex',
@@ -163,7 +163,7 @@ export default function Projects() {
                     href={p.live}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn"
+                   
                     whileHover={{ scale: 1.08 }}
                     style={{
                       display: 'flex',

@@ -9,8 +9,8 @@ import whatsappLogo from "../../public/whatsapp.png";
 import instagramLogo from "../../public/insta.png";
 import facebookLogo from "../../public/facebook.png";
 
-import "../CSS/Contact.css"
-import '../index.css' 
+
+import '../index.css'
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -75,12 +75,32 @@ export default function Contact() {
   ];
 
   return (
-    <section className="contact-section">
+    <section
+      style={{
+        minHeight: "100vh",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        background:
+          "radial-gradient(circle at 25% 25%, rgba(0,255,200,0.08), transparent 80%)",
+        color: "#fff",
+        padding: "2rem 1.5rem 4rem",
+        textAlign: "center",
+      }}
+    >
       <motion.h1
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="contact-title"
+        style={{
+          fontSize: "2.6rem",
+          margin: "1.5rem 0 0.5rem",
+          background: "linear-gradient(90deg,#00b4ff,#00ffe0)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
       >
         Let’s Connect & Collaborate 🤝
       </motion.h1>
@@ -89,13 +109,26 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="contact-subtitle"
+        style={{
+          fontSize: "1.1rem",
+          color: "rgba(255,255,255,0.8)",
+          maxWidth: "700px",
+          marginBottom: "2rem",
+          lineHeight: "1.6",
+        }}
       >
         Whether it’s a new project, a collaboration, or just to say hi — I’d love to hear from you!
       </motion.p>
 
       {/* Quick Links */}
-      <motion.div className="contact-links">
+      <motion.div style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "25px",
+        marginBottom: "2.2rem",
+        zIndex: 1,
+      }}>
         {quickLinks.map((item, i) => (
           <motion.a
             key={i}
@@ -109,7 +142,15 @@ export default function Contact() {
             <motion.img
               src={item.img}
               alt={item.title}
-              className="social-icon"
+              style={{
+                width: "60px",
+                height: "60px",
+                borderRadius: "50%",
+                objectFit: "cover",
+                border: "2px solid #00b4ff",
+                background: "rgba(255,255,255,0.05)",
+                padding: "8px",
+              }}
               animate={{ y: [0, -6, 0] }}
               transition={{
                 duration: 3 + i * 0.3,
@@ -127,17 +168,68 @@ export default function Contact() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.9 }}
-        className="contact-form"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "14px",
+          width: "100%",
+          maxWidth: "500px",
+        }}
       >
-        <input type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required />
-        <input type="text" name="contact" placeholder="Your Email or Phone" value={form.contact} onChange={handleChange} required />
-        <input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleChange} required />
-        <textarea name="message" placeholder="Your Message..." value={form.message} onChange={handleChange} rows="5" required />
-        <motion.button type="submit" className="contact-btn" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <input style={{
+          padding: "12px",
+          borderRadius: "8px",
+          border: "none",
+          background: "rgba(255,255,255,0.08)",
+          color: "#fff",
+          outline: "none",
+          fontSize: "1rem",
+        }} type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required />
+        <input style={{
+          padding: "12px",
+          borderRadius: "8px",
+          border: "none",
+          background: "rgba(255,255,255,0.08)",
+          color: "#fff",
+          outline: "none",
+          fontSize: "1rem",
+        }} type="text" name="contact" placeholder="Your Email or Phone" value={form.contact} onChange={handleChange} required />
+        <input style={{
+          padding: "12px",
+          borderRadius: "8px",
+          border: "none",
+          background: "rgba(255,255,255,0.08)",
+          color: "#fff",
+          outline: "none",
+          fontSize: "1rem",
+        }} type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleChange} required />
+        <textarea style={{
+          padding: "12px",
+          borderRadius: "8px",
+          border: "none",
+          background: "rgba(255,255,255,0.08)",
+          color: "#fff",
+          outline: "none",
+          fontSize: "1rem",
+          resize: "none",
+        }} name="message" placeholder="Your Message..." value={form.message} onChange={handleChange} rows="5" required />
+        <motion.button type="submit" style={{
+          padding: "12px",
+          background: "linear-gradient(90deg,#00b4ff,#00ffe0)",
+          border: "none",
+          borderRadius: "8px",
+          color: "#fff",
+          fontWeight: "600",
+          cursor: "pointer",
+        }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           🚀 Send Message
         </motion.button>
 
-        {status && <motion.p initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className="contact-status">{status}</motion.p>}
+        {status && <motion.p initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} style={{
+          marginTop: "10px",
+          color: "#0ff",
+          fontWeight: "500",
+        }}>{status}</motion.p>}
       </motion.form>
     </section>
   );
